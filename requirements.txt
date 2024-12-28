@@ -1,5 +1,6 @@
 numpy>=1.25.0
 scikit-learn>=1.3.0
 streamlit
+gradio
 setuptools>=65.5.1
 wheel
