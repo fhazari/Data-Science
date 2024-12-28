@@ -60,4 +60,4 @@ interface = gr.Interface(
 )
 
 # Launch the app
-interface.launch(share=True)
+interface.launch()
