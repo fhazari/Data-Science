@@ -70,6 +70,11 @@ columns = [
        'Yelahanka New Town', 'Yelenahalli', 'Yeshwanthpur'
 ]
 
+
+# Load your model
+with open("model_pickle2.pkl", "rb") as f:
+    model = pickle.load(f)
+
 def predict_price(location, sqft, bath, bhk):
     try:
         # Locate the index of the specified location in the columns list
@@ -91,7 +96,7 @@ def predict_price(location, sqft, bath, bhk):
             x[loc_index] = 1
         
         # Predict the price using the trained model (replace `lr_clf` with your model)
-        price = lr_clf.predict([x])[0]
+        price = model.predict([x])[0]
         return round(price, 2)
     except Exception as e:
         return f"Error: {str(e)}"
