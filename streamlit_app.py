@@ -70,7 +70,7 @@ columns = [
        'Yelahanka New Town', 'Yelenahalli', 'Yeshwanthpur'
 ]
 
-
+import pickle
 # Load your model
 with open("model_pickle2.pkl", "rb") as f:
     model = pickle.load(f)
